@@ -1,10 +1,5 @@
 function displayTranslation(response) {
-  new Typewriter("#translation", {
-    strings: [response.data.answer],
-    autoStart: true,
-    delay: 15,
-    cursor: "",
-  });
+  document.querySelector("#translation").textContent = response.data.answer;
 }
 
 function generateTranslation(event) {
@@ -19,7 +14,7 @@ function generateTranslation(event) {
   if (!apiKey) {
     translationElement.classList.remove("hidden");
     translationElement.textContent =
-      "Translation is not configured. Add your SheCodes API key before using the translator.";
+      "Translation is not configured. Configure the API key securely before using the translator.";
     return;
   }
   const sourceInstruction =
