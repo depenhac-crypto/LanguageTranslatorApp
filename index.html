@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="src/index.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/romantic" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/winter" rel="stylesheet" />
+    <title>AI Language Translator App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Love of Lingo</h1>
+        <h3>Your personal linguistic assistant</h3>
+      </header>
+      <main>
+        <div class="form-container">
+          <form id="translator-form">
+            <textarea
+              placeholder="Enter text to translate"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+              rows="3"
+            ></textarea>
+            <div class="language-controls">
+              <label for="source-language">
+                From
+                <select id="source-language">
+                  <option value="auto">Detect language</option>
+                  <option value="English">English</option>
+                  <option value="French">French</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="German">German</option>
+                  <option value="Italian">Italian</option>
+                  <option value="Portuguese">Portuguese</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Korean">Korean</option>
+                  <option value="Chinese">Chinese</option>
+                </select>
+              </label>
+              <button
+                type="button"
+                class="swap-button"
+                id="swap-languages"
+                aria-label="Swap languages"
+              >
+                ⇄
+              </button>
+              <label for="target-language">
+                To
+                <select id="target-language">
+                  <option value="French">French</option>
+                  <option value="English">English</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="German">German</option>
+                  <option value="Italian">Italian</option>
+                  <option value="Portuguese">Portuguese</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Korean">Korean</option>
+                  <option value="Chinese">Chinese</option>
+                </select>
+              </label>
+              <input type="submit" class="submit-button" value="Translate" />
+            </div>
+          </form>
+        </div>
+        <div
+          class="translation hidden"
+          id="translation"
+          aria-live="polite"
+        ></div>
+      </main>
+
+      <footer>
+        Built by
+        <a
+          href="https://www.linkedin.com/in/christina-watson-751465386/"
+          target="_blank"
+          >Christina Watson</a
+        >, open-sourced on
+        <a
+          href="https://github.com/depenhac-crypto/AI_Poem_Generator"
+          target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="">Netlify</a>
+      </footer>
+    </div>
+  </body>
+</html>
